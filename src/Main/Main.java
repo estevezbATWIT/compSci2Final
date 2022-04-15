@@ -13,7 +13,7 @@ public class Main {
 		Scanner in = new Scanner(System.in);
 		
 		try {
-		File wordFile = new File("C:\\Users\\hernandezk8\\git\\compSci2Final3\\src\\Main\\words");
+		File wordFile = new File("..\\CompSci2Final\\assets\\words");
 		Scanner wF = new Scanner(wordFile);
 		while(wF.hasNext()) {
 			wordle.add(wF.next());
