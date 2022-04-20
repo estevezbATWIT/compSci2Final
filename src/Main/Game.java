@@ -120,8 +120,7 @@ public class Game implements ActionListener {
 			}
 		}
 		if (count > 5) {
-			JOptionPane.showMessageDialog(null, "You Lost.Better luck next time.", "Oops",
-					JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(null, "You Lost.Better luck next time.", "Oops", JOptionPane.INFORMATION_MESSAGE);
 			gameFrame.dispose();
 			return;
 		}
