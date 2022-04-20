@@ -25,57 +25,6 @@ import javax.swing.border.Border;
 
 public class Game implements ActionListener {
 
-	class WordPanel extends JPanel {
-
-		JLabel[] wordColumns = new JLabel[5];
-
-		public WordPanel() {
-			this.setLayout(new GridLayout(1, 5));
-			Border blackBorder = BorderFactory.createLineBorder(Color.LIGHT_GRAY);
-			for (int i = 0; i < 5; i++) {
-				wordColumns[i] = new JLabel();
-				wordColumns[i].setHorizontalAlignment(JLabel.CENTER);
-				wordColumns[i].setOpaque(true);
-				wordColumns[i].setBorder(blackBorder);
-				this.add(wordColumns[i]);
-			}
-		}
-
-		public void clearWordPanel() {
-			for (int i = 0; i < 5; i++) {
-				wordColumns[i].setText("");
-			}
-		}
-
-		public void setPanelText(String charValue, int position, Color color) {
-			this.wordColumns[position].setText(charValue);
-			this.wordColumns[position].setBackground(color);
-		}
-	}
-
-	class UserPanel extends JPanel {
-
-		private JTextField userInput;
-		private JButton okButton;
-
-		public UserPanel() {
-			this.setLayout(new GridLayout(1, 2));
-			userInput = new JTextField();
-			this.add(userInput);
-			okButton = new JButton("OK");
-			this.add(okButton);
-		}
-
-		public JTextField getUserInput() {
-			return userInput;
-		}
-
-		public JButton getOkButton() {
-			return okButton;
-		}
-
-	}
-
 	private JFrame gameFrame;
 	private WordPanel[] wordPanelArray = new WordPanel[6];
 	private UserPanel userPanel;
